@@ -41,7 +41,7 @@ class Shelf(shelve.Shelf):
         result = curr.fetchone()
         curr.close()
         if result:
-            return pickle.loads(str(result[0]))
+            return pickle.loads(result[0])
         else:
             return default_value
 
